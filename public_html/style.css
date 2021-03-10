@@ -8,3 +8,27 @@ and open the template in the editor.
     Author     : Disha
 */
 
+/* CSS for Navbar Starts */
+
+.navbar .nav-link {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.navbar-toggler {
+    outline: none;
+}
+
+.bg-black {
+    background: #000;
+}
+
+
+ul {
+    margin-left: auto;
+}
+
+/* CSS for Navbar Ends */
+
