@@ -279,4 +279,23 @@ margin-top: 80px;
     
 }
 
+/*========= Footer Section CSS ===========*/
+
+footer li a{
+    text-decoration: none;
+    color: white;
+}
+
+
+footer li a:hover{
+    color: red;
+}
+
+footer li{
+    text-decoration: none;
+    color: white;
+}
+
+
+
 
