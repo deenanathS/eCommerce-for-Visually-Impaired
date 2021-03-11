@@ -33,3 +33,88 @@ ul {
 
 /* CSS for Navbar Ends */
 
+/*========= Slider CSS ===========*/
+
+.carousel-caption{
+    padding-top: 6%;
+    padding-bottom: 6%;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+}
+
+.carousel-item{
+    height: 600px;
+}
+
+.carousel-image-1 {
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,0.4)), url("Images/assign3.jpg");
+    background-size: cover;
+}
+
+.carousel-image-2 {
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,0.4)), url("Images/assign2.jpg"), no-repeat , center;
+    background-size:cover;
+}
+
+.carousel-image-3 {
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,0.4)), url("Images/assign6.jpg"), no-repeat, center;
+    background-size: cover;
+}
+
+/*========= Button CSS ===========*/
+
+.title-color{
+    color: #fff;
+}
+
+.btn-color{
+    background: #000;
+    color: #cccccc;
+}
+
+.btn-color:hover{
+    color: #fff;
+}
+
+
+/*========= Ripple Effect for Button CSS ===========*/
+
+.slide-btn:hover, .slide-btn:focus, .slide-btn:active{
+    animation-name: slide-btn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+@keyframes slide-btn{
+    0%{
+        transform: translateY(0px);
+    }
+    
+    33%{
+        transform: translateY(100px);
+    }
+    
+    50%{
+        transform: translateY(-60px);
+    }
+    
+    65%{
+        transform: translateY(-40px);
+    }
+    85%{
+        transform: translateY(20Px);
+    }
+    100%{
+        transofrm: translateY (0px);
+    }
+}
+
+.slide-btn {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px);
+    box-shadow: 0 0 1px rgba(0,0,0,0)
+}
+
+/*  CSS for Carousel Slider and Button Ends */
