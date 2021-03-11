@@ -10,6 +10,10 @@ and open the template in the editor.
 
 /* CSS for Navbar Starts */
 
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 .navbar .nav-link {
     font-size: 14px;
     text-transform: uppercase;
@@ -53,7 +57,7 @@ ul {
 }
 
 .carousel-image-2 {
-    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,0.4)), url("Images/assign2.jpg"), no-repeat , center;
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,0.4)), url("Images/assign2.jpg"), no-repeat, center;
     background-size:cover;
 }
 
@@ -118,306 +122,109 @@ ul {
 }
 
 /*  CSS for Carousel Slider and Button Ends */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body{
-    font-family: 'Poppins', sans-serif;
-}
 
-.navbar{
-    display: flex;
-    align-items: center;
-    padding: 20px;
-}
 
-nav{
-    flex: 1;
-    text-align: right;
-}
+/*========= Product Section CSS ===========*/
 
-nav ul{
-    display: inline-block;
-    list-style: none;
-}
 
-nav ul li{
-    display: inline-block;
-    margin-right: 20px;
-}
 
-a{
-    text-decoration: none;
-    color: #555555;
-}
-
-p{
-    color: #555555;
-}
-.container{
-    max-width: 1300px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-.row{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.col-2{
-    flex-basis: 50%;
-    min-width: 300px;
-
-}
-
-.col-2 img{
-    max-width: 80%;
-    padding: 50px 0;
-   align-items: baseline;
-   
-}
-
-.col-2 h1{
-    font-size: 50px;
-    line-height: 60px;
-    margin: 25px 0;
-}
-
-.btn{
-    display: inline-block;
-    background: #f1607d;
-    color: white;
-    padding: 8px 30px;
-    margin: 30px 0;
-    border-radius: 30px;
-}
-
-.btn:hover{
-    background: rgba(160, 55, 55, 0.856);
-}
-
-.header{
-    background: radial-gradient(#ffffff , #faadbd);
-}
-
-.header .row{
-    margin-top:70px ;
-}
-
-.categories{
-    margin: 70px 0;
-}
-
-.col-3{
-    flex-basis: 30%;
-    min-width: 250px;
-    margin-bottom: 30px;
-}
-
-.col-3 img{
-    width: 100%;
-}
-
-.small-container{
-    max-width: 1080px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-.col-4{
-    flex-basis: 25%;
-    padding: 10px;
-    min-width: 200px;
+.section-title {
     margin-bottom: 50px;
-    transition: transform 0.5s;
 }
 
-.col-4 img{
-    width: 100%;
-}
-
-.title{
+.products-section h1.title {
+    color: red;
+    font-size: 20px;
     text-align: center;
-    margin: 0 auto 80px;
+    max-width: 150px;
+    margin: auto;
+    background-color: #ffcccc;
+    border-radius: 6px;
+}
+
+.products-section h2.subtitle {
+    font-size: 25px;
+    font-family:monospace;
+    text-align: center;
+}
+
+.products-section{
+   justify-content:center;
+   max-width: 75%;
+   margin: auto;
+}
+
+.products-section .products-item{
+    box-shadow: 0 0 10px #dddde3;
+}
+
+.products-section .product-img{
+    border-bottom: 1px solid #eeeeee;
     position: relative;
-    line-height: 60px;
-    color: #555555;
-}
-
-.title::after{
-    content: '';
-    background: #faadbd ;
-    width: 80px;
-    height: 5px;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-h4{
-    color: #555555;
-    font-weight: normal;
-}
-
-.col-4 p{
-    font-size: 14px;
-}
-
-.rating .fa{
-    color: #faadbd;
-}
-
-.col-4:hover{
-    transform: translateY(-7px);
-}
-
-.offer{
-    background: radial-gradient(#ffffff , #faadbd);
-    margin-top: 80px;
-    padding: 30px 0;
-}
-
-.col-2 .offer-img{
-    padding: 50px;
-}
-
-small{
-    color: #555555;
-}
-
-.testimonial{
-    padding-top: 108px;
-}
-
-.testimonial .col-3{
-    text-align: center;
-    padding: 40px 20px;
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: transform 0.5s;
-}
-
-.testimonial .col-3 img{
-    width: 50px;
-    margin-top: 20px;
-    border-radius: 50%;
-}
-
-.testimonial .col-3:hover{
-    transform: translateY(-10px);
-}
-
-.fa.fa-quote-left{
-    font-size: 34px;
-    color: rgb(230, 159, 159);
-}
-
-.col-3 p{
-    font-size: 12px;
-    margin: 12px 0;
-    color: #777777;
-}
-
-.testimonial .col-3 h3{
-    font-weight: 600;
-    color: #555555;
-    font-size: 18px;
 }
 
 
-.brands{
-    margin: 100px auto;
-}
-
-.col-5{
-    width: 160px;
-}
-
-.col-5 img{
+.products-section .product-img img{
     width: 100%;
-    cursor: pointer;
-    filter: grayscale(100%);
+    display: block;
 }
 
-.col-5 img:hover{
-    filter: grayscale(0);
-}
 
-.footer{
-    background: black;
-    color: #8a8a8a;
-    font-size: 14px;
-    padding: 60px 0 20px;
-}
-
-.footer p{
-    color: #8a8a8a;
-}
-
-.footer h3{
-    color: whitesmoke;
-}
-
-.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
-    min-width: 250px;
-    margin-bottom: 20px;
-}
-
-.footer-col-1{
-    flex-basis: 30%;
-}
-
-.footer-col-2{
-    flex: 1;
+.products-section .product-content{
+    padding: 0 30px;
     text-align: center;
 }
 
-.footer-col-2 img{
-    width: 180px;
-    margin-bottom: 20px;
-    height: 39px;
+.products-section .product-content .product-price {
+    margin: 15px 0 5px;
 }
 
-.footer-col-3 , .footer-col-4{
-    flex-basis: 12%;
-    text-align: center;
+.products-section .product-content .product-price .new-price {
+    font-size: 18px;
+    font-weight: 700;
+    display: inline-block;
+    margin: 0px 5px;
 }
 
-ul{
-    list-style: none;
+.products-section .product-content .product-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222222;
+    line-height: 26px;
+    margin: 0;
+    padding-bottom: 20px;
+    
 }
 
-.app-logo{
-    margin-top: 20px;
+.products-section .btn-color{
+    color: #ffcccc;
 }
 
-.app-logo img{
-    width: 140px;
+.products-section .product-img .overlay{
+    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s ease;
+    opacity: 0;
+    background-color: rgba(0,0,0,0.6);
 }
 
-.footer hr{
-    border: none;
-    background: #b5b5b5;
-    height: 1px;
-    margin: 20px 0;
+.products-section .product-img .overlay .btn{
+    margin: auto;
+    transform: translateY(100px);
+    transition: all 0.5s ease;
 }
 
-.copyright{
-    text-align: center;
+.products-section .products-item:hover .product-img .overlay{
+    opacity: 1;
 }
 
-.menu-icon{
-    width: 28px;
-    margin-left: 20px;
-    display: none;
+.products-section .products-item:hover .product-img .overlay .btn{
+    transform: translateY(0px);
 }
+
+
+
