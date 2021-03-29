@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Alan Example</title>
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+			rel="stylesheet">
+	</head>
+	<body>
+		<div class="alan-btn"></div>
+		<script type="text/javascript"
+                    src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+                <script>
+			
+                        
+                        var alanBtnInstance = alanBtn({
+                            key: "fd0b285a75b5490eea738e81a43554f02e956eca572e1d8b807a3e2338fdd0dc/stage",
+                            onCommand: function (commandData) {
+                                if (commandData.command === "navigate") {
+                                    setScreen(commandData.screen);
+                                }
+                            },
+	                // Listening to the button state
+                            onConnectionStatus: async function(status) {
+                                if (status === 'authorized') {
+                                await alanBtnInstance.activate();
+                                alanBtnInstance.playText('Hey, this is Alan, Welcome to the Spike Lifestyle. What is your name ?');			
+                                }
+                            },		
+                            rootEl: document.getElementById("alan-btn"),
+                            
+                            
+                        });
+                        
+                        function setScreen(screen) {
+                            
+                        
+                        };
+                        
+                        
+                        
+                        
+		</script>
+	</body>
+</html>
