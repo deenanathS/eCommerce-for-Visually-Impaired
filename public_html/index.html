@@ -18,7 +18,8 @@ and open the template in the editor.
         <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
         <script src="https://use.fontawesome.com/224b866eb7.js"></script><!-- Linked Font Awesome Icons -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"><!-- Linked Google Fonts i.e Poppins category -->
-        
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+			rel="stylesheet">
         <!<!-- Internal CSS for Style Switcher -->
         
         <style>
@@ -634,6 +635,40 @@ and open the template in the editor.
             
             });
         </script>
+        
+        <div class="alan-btn"></div>
+		<script type="text/javascript" src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+                <script>
+			
+                        
+                        var alanBtnInstance = alanBtn({
+                            key: "fd0b285a75b5490eea738e81a43554f02e956eca572e1d8b807a3e2338fdd0dc/stage",
+                            onCommand: function (commandData) {
+                                if (commandData.command === "navigate") {
+                                    setScreen(commandData.screen);
+                                }
+                            },
+	                // Listening to the button state
+                            onConnectionStatus: async function(status) {
+                                if (status === 'authorized') {
+                                await alanBtnInstance.activate();
+                                alanBtnInstance.playText('Hey, this is Alan, Welcome to the Spike Lifestyle. What is your name ?');			
+                                }
+                            },		
+                            rootEl: document.getElementById("alan-btn"),
+                            
+                            
+                        });
+                        
+                        function setScreen(screen) {
+                            
+                        
+                        };
+                        
+                        
+                        
+                        
+		</script>
         \
         
         
