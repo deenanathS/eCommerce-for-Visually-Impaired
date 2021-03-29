@@ -25,7 +25,7 @@ and open the template in the editor.
             
             .themes{
                 position: fixed;
-                top: 600px;
+                top: 560px;
                 left:0;
                 text-align: left;
                 color: white;
@@ -617,6 +617,23 @@ and open the template in the editor.
             <p class="themes-btn"><i class="fa fa-cog fa-3x fa-spin" aria-hidden="true"></i></p>
         </div>  
         
+        <script>
+            $(document).ready(function(){
+            $('ul.theme-colors li').click(function(){
+                $('body,nav, footer.page-footer').css('background',$(this).css('color'));
+                
+            });
+            
+            $('ul.logo-colors li').click(function(){
+                $('h1,h2,h3,h4,h5,h6,p,i,a').css('color',$(this).css('color'));
+            });
+            
+            $('p.themes-btn').click(function(){
+                $('.colors').toggleClass('active');
+            });
+            
+            });
+        </script>
         \
         
         
