@@ -18,6 +18,139 @@ and open the template in the editor.
         <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
         <script src="https://use.fontawesome.com/224b866eb7.js"></script><!-- Linked Font Awesome Icons -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"><!-- Linked Google Fonts i.e Poppins category -->
+        
+        <!<!-- Internal CSS for Style Switcher -->
+        
+        <style>
+            
+            .themes{
+                position: fixed;
+                top: 600px;
+                left:0;
+                text-align: left;
+                color: white;
+            }
+            
+            .themes p.themes-btn{
+                color: #333;
+                background: white;
+                padding: 23px 15px;
+                box-shadow: 3px 3px 0 -2px rgba(0,0,0,0.2);
+                border-radius: 0 0 5px 0;
+                font-weight: bold;
+            }
+            
+            .themes p.themes-btn:hover{
+                box-shadow: 4px 4px 10px -3px rgba(0,0,0,0.56);
+            }
+            
+            .themes .colors{
+                float: left;
+                padding: 10px;
+                background: rgba(0,0,0,0.5);
+                border-radius: 0 0 10px 0;
+                margin-left: -300px;
+            }
+            
+            .themes .colors.active{
+                   margin-left: 0;
+            }
+            
+            .themes .colors h3{
+                font-size: 15px;
+                font-family: tahoma;
+                font-weight: normal;
+                text-transform: capitalize;
+                margin-bottom: 7px;
+            }
+            
+            .themes .themes-btn{
+                float: right;
+                cursor: pointer;
+            }
+            
+            .themes ul li{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                border-radius: 8.8px;
+                margin-right: 2px;
+            }  
+            
+            .themes ul li:hover {
+                filter: alpha(opacity);
+                opacity: 0.8;
+            }
+            
+            .themes ul.theme-colors li:nth-child(1),
+            .themes ul.logo-colors li:nth-child(1){
+                background: #000;
+                color: #000;
+            }
+            
+            .themes ul.theme-colors li:nth-child(2),
+            .themes ul.logo-colors li:nth-child(2){
+                background: white;
+                color: white;
+            }
+            
+            .themes ul.theme-colors li:nth-child(3),
+            .themes ul.logo-colors li:nth-child(3){
+                background: #0084d6;
+                color: #0084d6;
+            }
+            
+            .themes ul.theme-colors li:nth-child(4),
+            .themes ul.logo-colors li:nth-child(4){
+                background: #f44336;
+                color: #f44336;
+            }
+            
+            .themes ul.theme-colors li:nth-child(5),
+            .themes ul.logo-colors li:nth-child(5){
+                background: #7b1fa2;
+                color: #f44336;
+            }
+            
+            .themes ul.theme-colors li:nth-child(6),
+            .themes ul.logo-colors li:nth-child(6){
+                background: #00acc1;
+                color: #00acc1;
+            }
+            
+            .themes ul.theme-colors li:nth-child(7),
+            .themes ul.logo-colors li:nth-child(7){
+                background: #43a047;
+                color: #43a047;
+            }
+            
+            .themes ul.theme-colors li:nth-child(8),
+            .themes ul.logo-colors li:nth-child(8){
+                background: #f57c00;
+                color: #f57c00;
+            }
+            
+            .themes ul.theme-colors li:nth-child(9),
+            .themes ul.logo-colors li:nth-child(9){
+                background: #455a64;
+                color: #455a64;
+            }
+            
+            .themes-btn{
+                border-top-right-radius: 25px!important;
+                border-bottom-right-radius: 25px!important;
+                padding-top: 15px!important;
+                padding-right: 35px!important;
+                padding-left: 35px!important;
+            }
+            
+            .colors h1{
+                font-size: 15px;
+            }
+        </style>
+        
+        <!<!-- End of Internal CSS -->
     </head>
     
     <body>
