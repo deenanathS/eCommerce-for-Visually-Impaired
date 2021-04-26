@@ -440,7 +440,7 @@
 
   .g-sm-1,
 .gy-sm-1 {
-    --bs-gutter-y: 0.25rem;
+    --bs-gutter-y: 0.25rem; 
   }
 
   .g-sm-2,
