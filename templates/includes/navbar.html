@@ -1,0 +1,124 @@
+<!-- Nav-Bar Section -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-black fixed-top">
+    <!-- This is for the responsiveness of the navbar -->
+        <div class="container">
+            <!-- Container is a bootstrap class -->
+            <a href="{% url 'home' %}" class="navbar-brand">Spike Lifestyle</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <!-- These are bootstrap classes -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <!-- Used data target id here -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- ml=margin left -->
+                            <li class="nav-item {% if title == 'home' %} active {% endif %}">
+                                <a href="{% url 'home' %}" class="nav-link" style="color: white">Home</a>
+                                <!-- Made home active using active class of bootstrap -->
+                            </li>
+                            <li class="nav-item  {% if title == 'products' %} active {% endif %}">
+                                <a href="{#% url 'products'%#}" target="_blank" class="nav-link"
+                                    style="color: white">Products</a>
+                            </li>
+                            {% if request.user.is_authenticated %}
+                            <li class="nav-item">
+                                <a href="{% url 'logout' %}" class="nav-link" style="color: white" >Sign-Out</a>
+                            </li>
+                            {% else %}
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" style="color: white" data-bs-toggle="modal"
+                                    data-bs-target="#signupModal">Sign-Up</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" style="color: white" data-bs-toggle="modal"
+                                    data-bs-target="#loginModal">Login</a>
+                            </li>
+                            {% endif %}
+                            <li class="nav-item  {% if title == 'about' %} active {% endif %}">
+                                <a href="{% url 'about' %}" style="color: white" target="_blank" class="nav-link">About</a>
+                            </li>
+                            {% if request.user.is_authenticated %}
+                            <li class="nav-item">
+                                <a href="{#% url 'cart' %#}" target="_blank" class="nav-link" style="color: white">
+                                    <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                                    <!-- fa-2x is used to increase the size of icon 2 times -->
+                                </a>
+                            </li>
+                            {% endif %}
+                    </ul>
+            </div>
+        </div>
+</nav>
+<!-- End of Nav-Bar Section -->
+<!-- Modal -->
+<div class="modal fade" id="signupModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title text-center w-100 font-weight-bold">Sign-Up</h4>
+            </div>
+            <form action="{% url 'register' %}" method="POST" class="modal-body mx-3">
+                {% csrf_token %}
+                <div class="md-form mb-5">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <label data-error="wrong" data-success="right">Name</label>
+                    <input type="text" class="form-control validate" name="username" placeholder="Username">
+                </div>
+
+                <div class="md-form mb-5">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <label data-error="wrong" data-success="right">Email</label>
+                    <input type="email" name="email" class="form-control validate" name="email" placeholder="Email">
+
+                </div>
+
+                <div class="md-form mb-5">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <label data-error="wrong" data-success="right">Password</label>
+                    <input type="password" class="form-control validate" name="password1" placeholder="Type Password">
+                </div>
+                <div class="md-form mb-5">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <label data-error="wrong" data-success="right">Password</label>
+                    <input type="password" class="form-control validate" name="password2" placeholder="Confirm Password">
+                </div>
+                <!-- Modal Footer Starts -->
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-primary" type="submit">Sign-Up</button>
+                </div>
+                <!-- Modal Footer Starts -->
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+    <div class="modal fade" id="loginModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title text-center w-100 font-weight-bold">Login</h4>
+                </div>
+                <form action="{% url 'login' %}" method="POST" class="modal-body mx-3">
+                    {% csrf_token %}
+                    <div class="md-form mb-5">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <label data-error="wrong" data-success="right">Username</label>
+                        <input type="text" class="form-control validate" name="username" placeholder="Username">
+                    </div>
+
+                    <div class="md-form mb-5">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <label data-error="wrong" data-success="right">Password</label>
+                        <input type="password" class="form-control validate" name="password" placeholder="Password">
+                    </div>
+                    <!-- Modal Footer Starts -->
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button class="btn btn-primary" type="submit">Login</button>
+                    </div>
+                    <!-- Modal Footer Starts -->
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End of Modal Section -->
